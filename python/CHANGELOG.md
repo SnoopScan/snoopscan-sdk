@@ -2,13 +2,20 @@
 
 The Python and JavaScript SDKs are released together and carry one version.
 
-## Unreleased
+## 0.7.0 - 2026-11-24
 
+- Python 3.10: a key saved with `snoopscan login` is now read back (the settings
+  file is read with `tomli` on Python versions without `tomllib`).
+
+- `tech`: the technologies one page runs (CMS, shop platform, theme, analytics, CDN,
+  firewall, server), read from its HTML, response headers and cookie names. Takes
+  `maxAge` in milliseconds (default `0`, a fresh read). Costs 1 credit, plus what a
+  proxy or browser costs over a plain page.
 - `brand`: a site's name, logos, colors, fonts and social links, read from its own
   homepage. Takes `maxAge` in milliseconds (default 30 days; `0` reads the site
   again). Costs 5 credits when the site was read.
 
-## 0.6.0 - 2026-09-27
+## 0.6.0 - 2026-09-27 (not released on its own; shipped in 0.7.0)
 
 Brings this SDK level with the Go, PHP, Ruby, Java, .NET, Rust and Elixir SDKs.
 

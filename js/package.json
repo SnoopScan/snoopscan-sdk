@@ -1,6 +1,6 @@
 {
   "name": "snoopscan",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "JavaScript/TypeScript client for the SnoopScan web scraping API",
   "keywords": [
     "scraping",
