@@ -21,10 +21,10 @@ from pathlib import Path
 # TOML is in the standard library for reading (3.11+) but not for writing, and
 # the settings here are flat strings, so the file is written as plain
 # `key = "value"` lines and read back with tomllib.
-try:  # pragma: no cover - the fallback only runs on 3.10 and below
+try:  # pragma: no cover - which branch runs depends on the Python version
     import tomllib
-except ModuleNotFoundError:  # pragma: no cover
-    tomllib = None  # type: ignore[assignment]
+except ModuleNotFoundError:  # pragma: no cover - Python 3.10: the same parser, from PyPI
+    import tomli as tomllib  # type: ignore[no-redef]
 
 APP = "snoopscan"
 KNOWN = ("api_key", "base_url")
